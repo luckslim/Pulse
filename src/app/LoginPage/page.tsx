@@ -1,0 +1,49 @@
+"use client";
+import {
+  Container,
+  ContainerBackground,
+  ContainerImage,
+  ContainerLoginBox,
+} from "./style";
+import BackgroundImage from "../../../images/90595.jpg";
+import LogoImage from "../../../images/jellyfish.png"
+import Google from "../../../images/google.png"
+import Github from "../../../images/github.png"
+
+import Image from "next/image";
+export default function LoginPage() {
+  return (
+    <>
+      <Container>
+        <ContainerBackground>
+          <ContainerImage src={BackgroundImage} alt="background" />
+        </ContainerBackground>
+        <ContainerLoginBox>
+          <div>
+            <section>
+              <span>
+                <h1>Pulse</h1>
+                <Image src={LogoImage} alt="" width={60}/>
+              </span>
+              <p>Pulse your Development</p>
+            </section>
+            <nav>
+              <form action="">
+                <input type="text" placeholder="Digite seu Nome de Usuário" />
+                <input type="text" placeholder="Digite sua Senha"/>
+                <button>Login</button>
+                Faça Login com Google e Github:
+              </form>
+              <button><Image src={Google} width={30} alt=""/>Google</button>
+              <button > <Image src={Github} width={30} alt=""/>Github</button>
+              <span>
+                Ainda não é inscrito?
+                <button>Crie Sua Conta</button>
+              </span>
+            </nav>
+          </div>
+        </ContainerLoginBox>
+      </Container>
+    </>
+  );
+}
