@@ -4,21 +4,27 @@ import Image from "next/image";
 export const Container = styled.div`
     display: flex;
     height: 100vh;
+    justify-content: center;
 `;
 export const ContainerBackground = styled.div`
     width: 70%;
+    @media screen and (max-width:780px){
+        display: none;
+    }
 `;
 export const ContainerLoginBox = styled.div`
     width: 30%;
-    padding: 2rem;
     background-color: ${props => props.theme['gray-800']};
+        @media screen and (max-width:780px){
+        width: 100%;
+    }
     div{
         display: grid;
         grid: 1;
         gap: 1rem;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        padding: 2rem;
         section{
             display: grid;
             gap: 1rem;
@@ -27,7 +33,7 @@ export const ContainerLoginBox = styled.div`
                 align-items: center;
             }
             p{
-                color:${props=>props.theme['gray-400']};
+                color:${props => props.theme['gray-400']};
             }
         }
         nav{
@@ -36,21 +42,28 @@ export const ContainerLoginBox = styled.div`
             form{
                 display: grid;
                 gap: 1rem;
+                width: 100%;
                 input{
                     padding: 1rem;
-                    border: 1px solid ${props=>props.theme['gray-500']};
+                    border: 1px solid ${props => props.theme['gray-500']};
                     border-radius: 4px;
                 }
                 button{
+                    &:hover{
+                        opacity: calc(80%);
+                    }
                     cursor: pointer;
                     font-weight: 800;
                     padding: 1rem;
-                    background-color: ${props=>props.theme['green-500']};
+                    background-color: ${props => props.theme['green-500']};
                     border: none;
                     border-radius: 4px;
                 }
             }
             button{
+                 &:hover{
+                        opacity: calc(80%);
+                    }
                 font-weight: 800;
                 font-size: 1rem;
                 display: flex;
@@ -58,7 +71,7 @@ export const ContainerLoginBox = styled.div`
                 align-items: center;
                 gap: 0.5rem;
                 cursor: pointer;
-                background-color: ${props=>props.theme['gray-700']};
+                background-color: ${props => props.theme['gray-700']};
                 padding: 1rem;
                 border: none;
                 border-radius: 4px;
@@ -70,7 +83,7 @@ export const ContainerLoginBox = styled.div`
                 justify-content: space-between;
                 gap:1rem;
                 button{
-                    background-color: ${props=>props.theme['green-700']};
+                    background-color: ${props => props.theme['green-700']};
                 }
             }
         }

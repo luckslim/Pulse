@@ -11,7 +11,12 @@ import Google from "../../../images/google.png"
 import Github from "../../../images/github.png"
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 export default function LoginPage() {
+  const route = useRouter();
+  function handleLogin(){
+    route.push("/HomePage")
+  }
   return (
     <>
       <Container>
@@ -31,7 +36,7 @@ export default function LoginPage() {
               <form action="">
                 <input type="text" placeholder="Digite seu Nome de Usuário" />
                 <input type="text" placeholder="Digite sua Senha"/>
-                <button>Login</button>
+                <button onClick={()=>handleLogin()}>Login</button>
                 Faça Login com Google e Github:
               </form>
               <button><Image src={Google} width={30} alt=""/>Google</button>
