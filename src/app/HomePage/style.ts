@@ -9,22 +9,13 @@ export const ContainerProvider = styled.div`
 export const ContainerFeed = styled.div`
     width: 40%;
     display: grid;
-    grid: 1;
-    div{
+    justify-content: center;
+    align-items: center;
+    /* div{
         display: grid;
         grid: 1;
         padding: 1rem;
         gap: 1rem;
-        textarea{
-            width: 100%;
-            border: 1px solid ${props => props.theme['gray-500']};
-            border-radius: 8px;
-            height: 60px;
-            padding: 1rem;
-            &::placeholder{
-                text-align: center;
-            }
-        }
         span{
             display: flex;
             justify-content: space-between;
@@ -46,46 +37,39 @@ export const ContainerFeed = styled.div`
             }
         }
     }
+    section{
+        display:grid;
+        gap: 1rem;
+        border:1px solid ${props=>props.theme['gray-600']};
+        border-radius: 8px;
+        padding: 1rem;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width: 50px;
+                border-radius: 8px;
+            }
+            span{
+                display: grid;
+                p{
+                    color: ${props=>props.theme['gray-100']};
+                    font-weight: 800;
+                }
+            }
+        }
+        span{
+            display: flex;
+            gap: 1rem;
+        }
+    } */
 `;
 export const ContainerSideBar = styled.div`
     display: grid;
     grid: 1;
     gap: 1rem;
     padding: 1rem;
-    div{
-        display: grid;
-        gap: 0.3rem;
-        section{
-            display: flex;
-            align-items: center;
-            gap:1rem;
-            img{
-                width: 50px;
-                border-radius: 8px;
-            }
-            span{
-                p{
-                    color: ${props => props.theme['gray-100']};
-                    font-weight: 800;
-                }
-                small{
-                    color:${props => props.theme['gray-400']};
-                }
-            }
-        }
-        button{
-            padding:0.5rem;
-            background-color: ${props => props.theme['gray-900']};
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 800;
-            &:hover{
-                background-color: ${props => props.theme['gray-700']};
-            }
-
-        }
-    }
 `;
 export const ContainerExplorer = styled.div`
     display: grid;
