@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const Textarea = styled.textarea`
-width: 100%;
+max-width: 450px;
+min-width: 450px;
+max-height: 100px;
+min-height: 100px;
 border: 1px solid ${props => props.theme['gray-500']};
 border-radius: 8px;
 height: 60px;
